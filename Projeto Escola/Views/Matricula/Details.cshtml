@@ -1,0 +1,43 @@
+﻿@model Escola.Models.Matricula
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matricula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Aluno.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aluno.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MateriaLecionada.MateriaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MateriaLecionada.MateriaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MatriculaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
